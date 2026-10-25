@@ -1,0 +1,58 @@
+name: 报一个问题 / 一个真实场景 · Report a problem
+description: 产品缺陷、文档错误、跑不通的示例、课程里对不上的口径都走这里。
+title: "[问题] "
+labels:
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不用先证明你懂技术。写清三件事就够了：**场景 / 已有数据 / 期望产出**。
+        多数仓库还没有议题，你这条会直接成为口径。
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 场景（我在做什么）
+      description: 产线设备型号与工况、课程第几讲、还是站点/工具本身
+      placeholder: |
+        例：车间 2 台离心泵，采样 25.6 kHz 振动；或 我在给 2025 级讲「程序设计基础」第 6 次课
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 已有数据 / 复现步骤
+      description: 贴样例、报文、报错或命令。**不要贴真实生产数据、内网地址、学员姓名成绩**
+      placeholder: |
+        1. 执行 …
+        2. 期望 …，实际 …
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: 期望产出（什么算修好了）
+      description: 一句可验收的话，比如「文档里能查到 MQTT 接入的最小配置」
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: 属于哪条轨道
+      options:
+        - 工业互联网
+        - AI 教育与职教数字化
+        - 具身智能
+        - 智慧农业农村
+        - 工程底座
+        - 站点本身
+    validations:
+      required: true
+  - type: checkboxes
+    id: can-help
+    attributes:
+      label: 你愿意参与下一步吗（可选，不影响处理）
+      options:
+        - label: 我可以补数据样例 / 报文 / 标注口径
+        - label: 我可以自己提 PR，需要一名兜底评审
+        - label: 我可以长期跟这块，考虑走评审者阶梯
