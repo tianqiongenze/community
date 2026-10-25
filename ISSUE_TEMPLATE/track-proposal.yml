@@ -1,0 +1,65 @@
+name: 轨道提案 / 新仓库或新阶段 · Track proposal
+description: 想开一条新研究轨道、给筹备中的轨道立首个仓库，或调整路线图的阶段划分。
+title: "【轨道提案】"
+labels:
+  - track-proposal
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **具身智能**与**智慧农业农村**两条轨道当前名下没有自有仓库、没有维护者。
+        首位认真提案并连续落地两个阶段的人会走提名流程成为该轨道维护者（见 GOVERNANCE.md 的 L4 证据要求）。
+  - type: dropdown
+    id: track
+    attributes:
+      label: 目标轨道
+      options:
+        - 具身智能（当前 0 个仓库 / 0 名维护者）
+        - 智慧农业农村（当前 0 个仓库 / 0 名维护者）
+        - 工业互联网（活跃，扩展阶段）
+        - AI 教育与职教数字化（活跃，扩展阶段）
+        - 工程底座
+        - 以上都不是，是一条新轨道
+    validations:
+      required: true
+  - type: textarea
+    id: thesis
+    attributes:
+      label: 一句话主张（这个提案要证明什么）
+      description: 不是「做一个 X 系统」，而是「用什么约束换什么结论」
+      placeholder: |
+        例：在 4 台巡检小车上复用谛听已验证的 harness，验证降级策略能否在感知失效时保持决策可审计
+    validations:
+      required: true
+  - type: textarea
+    id: first-artifact
+    attributes:
+      label: 首个可复现验收物（两周到一个月内能交付什么）
+      description: 必须可被第三方复跑：台架、评测集、数据集口径、可运行示例都算
+    validations:
+      required: true
+  - type: textarea
+    id: what-you-bring
+    attributes:
+      label: 你能投入的部分，以及你缺的能力
+      description: 每周小时数、已有设备/数据、需要社区补的能力。写清楚缺什么比写全有什么更有用。
+    validations:
+      required: true
+  - type: textarea
+    id: reuse
+    attributes:
+      label: 打算复用社区里的哪些现成资产
+      description: 列出仓库名或技术雷达条目。本社区明确反对为同一问题做第二套方法论。
+      placeholder: |
+        例：diting-pdm 的 harness 与审计链路、industrial-analytics 的特征库、AgriKG 类知识图谱储备
+    validations:
+      required: true
+  - type: checkboxes
+    id: honesty
+    attributes:
+      label: 提案确认
+      options:
+        - label: 我确认不引入真实生产数据、企业内网地址或学员个人信息
+          validations:
+            required: true
+        - label: 我确认首个验收物可在声明的时间窗内交付，否则状态退回 next
