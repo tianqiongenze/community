@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 认领一个议题 · Claim an open issue
+    url: https://github.com/tianqiongenze/community/labels/good%20first%20issue
+    about: 每条都写了具名兜底人和验收标准，7 天内给你第一次完整评审。
+  - name: 讨论区 · Community discussions
+    url: https://github.com/tianqiongenze/community/discussions
+    about: 自我介绍、场景闲聊、还没成型想法。不用先证明你懂技术再发言。
+  - name: 漏洞与安全事项 · Report a vulnerability
+    url: https://github.com/tianqiongenze/community/security/advisories/new
+    about: 不要开公开议题。私有漏洞报告通道，见 SECURITY.md。
+  - name: 站点数据不对 · Wrong data on the site
+    url: https://github.com/tianqiongenze/community/issues/new?labels=data&title=%E6%95%B0%E6%8D%AE%E7%BA%A0%E9%94%99%EF%BC%9A
+    about: star 数、最近推送、仓库可见范围有误——这是快照与实时接口对齐问题，修起来最快。
